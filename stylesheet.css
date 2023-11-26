@@ -48,6 +48,7 @@ main {
 
 }
 
+
 .hero-text {
     
         font-family: Impact, Charcoal, sans-serif;
@@ -63,7 +64,15 @@ main {
          font-size: 7vw;
          opacity: 1;
          letter-spacing: 2px;
-}
+         animation: flip 2s infinite;
+         animation-delay: calc(2s * var(--i));
+
+       }
+       @keyframes flip {
+         0%,80% {
+           transform: rotateY(360deg) 
+         }
+       }
 
 .nav-item{
 
@@ -123,6 +132,14 @@ text-shadow: skyblue 1px 1px 1px;
      letter-spacing: 2px;
 
 }
+
+.singleCol:hover img{
+
+border-radius: 50%;
+transition: 2s;
+
+  }
+
 
 .intro2 {
 
@@ -279,6 +296,12 @@ footer a:hover{
 .me-2:hover {
     transform: scale(1.2);
     transition: 0.5s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .color-overlay {
+        min-height: 30vh;
+    }
 }
 
 @media (max-width: 768px) {
